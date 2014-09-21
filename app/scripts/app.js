@@ -9,5 +9,5 @@
  * Main module of the application.
  */
 angular
-  .module('gollumApp', ['ngStorage'])
+  .module('gollumApp', ['ngStorage', 'angular-loading-bar', 'ngAnimate'])
   .config(function (){});

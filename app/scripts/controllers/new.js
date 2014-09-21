@@ -11,11 +11,18 @@ angular.module('gollumApp')
   .controller('newCtrl', function ($scope, $localStorage, api) {
 
   // render from cache
-  $scope.news = $localStorage.news || [];
+  var news = $localStorage.news || [];
+  if(!news) {
+    console.log("loading overlay show");
+    $('.loading-overlay').show();
+  }else{
+    $scope.news = news;
+  }
 
   api.getNew('面试心经').then(function(data){
     $localStorage.news = data;
     $scope.news = data;
+    $('.loading-overlay').hide();
   });
 
   $scope.showDetail = function(data) {
