@@ -28,6 +28,7 @@ angular.module('gollumApp')
     var geo = getGeo(data.z_map);
     
     renderBMap('geo-map', geo);
+    $('span[_cid=1]').hide();
     $scope.zph = data;
   };
 
