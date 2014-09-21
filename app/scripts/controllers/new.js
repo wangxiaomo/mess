@@ -8,11 +8,9 @@
  * Controller of the gollumApp
  */
 angular.module('gollumApp')
-  .controller('newCtrl', function ($scope, $location, api) {
+  .controller('newCtrl', function ($scope, api) {
 
-  var hash = $location.hash() || '简历宝典';
-  $scope.category = hash;
-  api.getNew(hash).then(function(data){
+  api.getNew('面试心经').then(function(data){
     $scope.news = data;
   });
 
