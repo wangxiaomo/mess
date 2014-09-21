@@ -12,7 +12,7 @@ angular.module('gollumApp')
 
   // render from cache
   var news = $localStorage.news || [];
-  if(!news) {
+  if(_.isEmpty(news)) {
     console.log("loading overlay show");
     $('.loading-overlay').show();
   }else{
