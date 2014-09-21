@@ -9,5 +9,5 @@
  * Main module of the application.
  */
 angular
-  .module('gollumApp', [])
+  .module('gollumApp', ['ngStorage'])
   .config(function (){});

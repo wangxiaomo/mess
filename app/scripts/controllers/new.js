@@ -8,9 +8,13 @@
  * Controller of the gollumApp
  */
 angular.module('gollumApp')
-  .controller('newCtrl', function ($scope, api) {
+  .controller('newCtrl', function ($scope, $localStorage, api) {
+
+  // render from cache
+  $scope.news = $localStorage.news || [];
 
   api.getNew('面试心经').then(function(data){
+    $localStorage.news = data;
     $scope.news = data;
   });
 
