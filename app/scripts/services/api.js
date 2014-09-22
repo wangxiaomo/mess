@@ -10,7 +10,7 @@
 angular.module('gollumApp')
   .service('api', function api($http, $q) {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    var API_URL_PREFIX = 'http://dev.yueqingwang.com/vapi/public/index.php/';
+    var API_URL_PREFIX = 'http://www.sjjyb.com/weixin/api/public/index.php/';
 
     var getAPIData = function(interfaceName) {
       var defer = $q.defer(),
