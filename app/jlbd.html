@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/zph.css -->
+    <!-- build:css(.tmp) styles/new.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/zph.css">
+    <link rel="stylesheet" href="styles/new.css">
     <!-- endbuild -->
   </head>
   <body ng-app="gollumApp">
@@ -31,43 +31,21 @@
       <div class="ad">
         <img src="images/ad.gif" alt="ad">
       </div>
-      <div ng-controller="zphCtrl">
+      <div ng-controller="msxjCtrl">
+        <div class="section-hd">
+         <div class="section-category">简历宝典</div>
+         <div class="section-go-back"><span ng-click="goHome()" class="glyphicon glyphicon-th-list"></span></div>
+        </div>
         <div class="section-data">
           <div class="loading-overlay"><img src="images/loading.gif"><p>努力加载中...</p></div>
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <td class="span-bold">名称</td>
-                <td ng-bind="zph.z_name"></td>
-              </tr>
-              <tr>
-                <td class="span-bold">时间</td>
-                <td ng-bind="zph.z_date"></td>
-              </tr>
-              <tr>
-                <td class="span-bold">电话</td>
-                <td ng-bind="zph.z_tel"></td>
-              </tr>
-              <tr>
-                <td class="span-bold">场所</td>
-                <td ng-bind="zph.z_location"></td>
-              </tr>
-              <tr>
-                <td class="span-bold">地址</td>
-                <td ng-bind="zph.z_address"></td>
-              </tr>
-              <tr>
-                <td class="span-bold">地图</td>
-                <td class="geo-map-container"><div id="geo-map"></div></td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <p><span class="span-bold">乘车路线:</span><span ng-bind="zph.z_bus"></span></p>
-                  <p ng-bind-html="showHTML(zph.z_content)"></p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <li ng-repeat="new in news" class="show-detail" ng-click="showDetail(new)">
+            <a href="javascript:void(0)" data-id="{{new.n_id}}">{{new.n_title}}</a>
+          </li>
+        </div>
+        <div class="detail-view">
+          <div class="hd-title"></div>
+          <div class="hd-meta"></div>
+          <div class="hd-content"></div>
         </div>
       </div>
       <div class="footer">
@@ -85,7 +63,6 @@ Copyright 2004-2014 Inc All Rights Reserved.<br>
     <script src="bower_components/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
-    <script src="http://api.map.baidu.com/api?v=1.5&ak=OesfTXXOSovcCosg3hbGyAKb"></script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -111,10 +88,10 @@ Copyright 2004-2014 Inc All Rights Reserved.<br>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/zph.js -->
+        <!-- build:js({.tmp,app}) scripts/jlbd.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/services/api.js"></script>
-        <script src="scripts/controllers/zph.js"></script>
+        <script src="scripts/controllers/jlbd.js"></script>
         <!-- endbuild -->
 </body>
 </html>

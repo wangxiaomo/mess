@@ -8,10 +8,10 @@
  * Controller of the gollumApp
  */
 angular.module('gollumApp')
-  .controller('newCtrl', function ($scope, $localStorage, api) {
+  .controller('msxjCtrl', function ($scope, $localStorage, api) {
 
   // render from cache
-  var news = $localStorage.news || [];
+  var news = $localStorage.msxj || [];
   if(_.isEmpty(news)) {
     console.log("loading overlay show");
     $('.loading-overlay').show();
@@ -20,7 +20,7 @@ angular.module('gollumApp')
   }
 
   api.getNew('面试心经').then(function(data){
-    $localStorage.news = data;
+    $localStorage.msxj = data;
     $scope.news = data;
     $('.loading-overlay').hide();
   });
