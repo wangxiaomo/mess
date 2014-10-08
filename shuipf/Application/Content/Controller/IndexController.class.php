@@ -30,6 +30,9 @@ class IndexController extends Base {
         $this->assign("SEO", $SEO);
         //把分页分配到模板
         $this->assign(C("VAR_PAGE"), $page);
+        if(I('hack')){
+            return $this->display("Index:copy");
+        }
         $this->display("Index:" . $tp[0]);
     }
 
