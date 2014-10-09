@@ -921,3 +921,7 @@ function SendMail($address, $title, $message) {
         return $e->errorMessage();
     }
 }
+
+function hack_mode(){
+    return (bool)I('hack');
+}
