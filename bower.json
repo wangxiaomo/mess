@@ -1,0 +1,26 @@
+{
+  "name": "GameKing",
+  "version": "0.0.0",
+  "authors": [
+    "wangxiaomo <wxm4ever@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "statics/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0",
+    "jquery.ui": "~1.11.1",
+    "jquery-file-upload": "~9.8.0"
+  }
+}
