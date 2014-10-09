@@ -16,6 +16,48 @@
 <link rel="stylesheet" href="/statics/css/origin/reset.css"/>
 <link rel="stylesheet" href="/statics/css/origin/9dee5408.css"/>
 <link rel="stylesheet" href="/statics/css/origin/layer.css"/>
+<link href="{$config_siteurl}statics/default/css/images.css" rel="stylesheet" type="text/css" />
+<style>
+.pageindex {
+    margin-right: 15px;
+}
+.clear { clear: both; }
+.left-bucket {
+    float: left;
+    width: 70%;
+    margin-bottom: 50px;
+}
+.right-bucket {
+    float: right;
+    width: 23%;
+}
+.first-block {
+    padding-top: 25px;
+}
+.last-block {
+    margin: 30px 0px;
+    margin-bottom: 50px;
+}
+.right-block {
+    width: 270px;
+    height: 410px;
+    overflow: visible;
+}
+.last-block a {
+    display: block;
+    margin: 10px 0;
+}
+.right-block .tit {
+    height: 10px;
+    border: none;
+}
+.title {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding: 35px;
+}
+</style>
 </head>
 <body >
 <noscript>您的浏览器不支持JS，将无法看到通过JS实现的效果</noscript>
@@ -75,82 +117,18 @@
 <!--V3 end-->
 <!-- common header end-->
 <div class="wrap">
-    <div class="clearfix screen1">
-        <div class="frame_left">
-                        <div class="toplist">
-                <h2 class="tit1"><em>人气网游 TOP 3</em></h2>
-                                <ul class="phlist">
-                                        <li>
-                                        <span class="num">1</span>
-                                        <div class="img"><a target="_blank" href="http://hg.youxi.com/"><img width="58" height="58" src="http://p7.yx-s.com/t0192e6e983ddb68cda.jpg"></a></div>
-                    <div class="txt">
-                        <p class="gametit"><a target="_blank" href="http://hg.youxi.com/">黑暗之光</a></p>
-                                                <span class="starbg"><i style="width:100%"></i></span>
-                        <p class="player_in">入驻玩家 56万</p>
-                    </div>
-                    <p class="c_gray infro_txt"><a class="c_gray" href="http://hg.youxi.com/" target="_blank">穿梭六大史诗时空，提炼文化精粹；威猛幻兽、神器，伴君戎马一生。</a></p>
-                    </li>
-                                                            <li>
-                                        <span class="num num2">2</span>
-                                        <div class="img"><a target="_blank" href="http://xy.youxi.com/"><img width="58" height="58" src="http://p9.yx-s.com/t014e4157dee80bb0e5.jpg"></a></div>
-                    <div class="txt">
-                        <p class="gametit"><a target="_blank" href="http://xy.youxi.com/">血饮传说</a></p>
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <p class="player_in">入驻玩家 42万</p>
-                    </div>
-                    <p class="c_gray infro_txt"><a class="c_gray" href="http://xy.youxi.com/" target="_blank">三大职业笑傲血饮之巅，千人团战尽显王者之风。热血重燃，新传奇由你续写!</a></p>
-                    </li>
-                                                            <li>
-                                        <span class="num num3">3</span>
-                                        <div class="img"><a target="_blank" href="http://qtol.youxi.com/"><img width="58" height="58" src="http://p5.yx-s.com/t01efca02da437664b5.jpg"></a></div>
-                    <div class="txt">
-                        <p class="gametit"><a target="_blank" href="http://qtol.youxi.com/">奇天</a></p>
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <p class="player_in">入驻玩家 46万</p>
-                    </div>
-                    <p class="c_gray infro_txt"><a class="c_gray" href="http://qtol.youxi.com/" target="_blank">首推“硬派团战”全新概念，还原PK本质，使战斗更加简单、自由。</a></p>
-                    </li>
-                                    </ul>
-                            </div>
-                    </div>
-        <!-- frame_left end -->
-        <div class="frame_cen">
-            <div class="bannerimg">
-                <!-- focus_img start -->
-                <div class="focus_img" id="sliderFrame">
-                  <position action="position" posid="1">
-                    <ul>
-                    <volist name="data" id="vo">
-                      <li style=""><a href="{$vo.data.url}" title="{$vo.data.title}"><img src="{$vo.data.thumb}" alt="{$vo.data.title}" width=570 height=270></a></li>
-                    </volist>
-                    </ul>
-                    <div class="focus_btn" style="z-index:999">
-                            <a href="javascript:;" class="cur"></a>
-                            <a href="javascript:;" class=""></a>
-                            <a href="javascript:;" class=""></a>
-                        </div>
-                    </position>
-                </div>
-                <!-- focus_img end -->
-            </div>
-            <div class="specl_column">
-                                <dl>
-                                  <get sql="SELECT * FROM shuipfcms_article  WHERE status=99 ORDER BY inputtime DESC" num="7">
-                                  <volist name="data" id="vo">
-                                    <if condition="$i eq 1">
-                                        <dt class="news_bbs">
-                                            <a class="columntit" target="_blank" href="{$vo.url}">[{:getCategory($vo['catid'], 'catname')}]{$vo.title}</a>
-                                        </dt>
-                                    <else />
-                                        <dd><i></i><a target="_blank" href="{$vo.url}">[{:getCategory($vo['catid'], 'catname')}]{$vo.title}</a></dd>
-                                    </if>
-                                  </volist>
-                                  </get>
-                                </dl>
-                            </div>
-        </div>
-        <!-- frame_cen end -->
-        <div class="frame_right">
+    <div class="left-bucket">
+
+<h1 class="title">{$title}</h1>
+<center>{$content}</center>
+<div class="fanye" style="border: 0px solid #ccc;">
+  <ul>{$pages}</ul>
+</div>
+<div class="clear"></div>
+
+    </div>
+    <div class="clearfix right-bucket">
+        <div class="right-block first-block">
             <h2 class="tit1"><em><b class="c_red">最新</b>开服列表</em></h2>
             <div class="newsevice">
                 <ul id="newzoneslist" class="clearfix">
@@ -165,48 +143,8 @@
             </div>
                                     <p><a target="_blank" href="http://p0.yx-s.com/ybox/YouXiSetup_Beta1.0.3.1010.rar" class="loadimg"><img src="http://p9.yx-s.com/d/inn/b28c6d9e/loadimg.jpg" width="270" height="108"></a></p>
                                 </div>
-        <!-- frame_right end -->
-    </div><!--screen1 end-->
-    <div class="clearfix screen2">
-        <div class="frame_left">
-            <h2 class="tit3"><em>热门活动</em></h2>
-            <div class="hotgame">
-                                <ul class="clearfix">
-                                        <li><a target="_blank" href="http://bbs.youxi.com/thread-108624-1.html"><img src="http://p0.qhimg.com/t0113b24a0dd36aa3a7.jpg" alt="血饮传说和YouXi一起旅行"></a></li>
-                                                            <li><a target="_blank" href="http://hd.youxi.com/qtol/lottery/1863.html"><img src="http://p3.qhimg.com/t0164868b05b8f21f59.jpg" alt="奇天大转盘"></a></li>
-                                                            <li><a target="_blank" href="http://bbs.youxi.com/thread-72303-1.html"><img src="http://p5.qhimg.com/t015803189cb09218c7.jpg" alt="黑暗之光点亮星座"></a></li>
-                                    </ul>
-                            </div>
-        </div>
-        <!-- frame_left end -->
-        <div class="frame_cen">
-            <h2 class="tit3"><em>精品页游</em></h2>
-            <div class="boutique">
-              <ul>
-                <position action="position" posid="3">
-                <volist name="data" id="vo">
-                  <li>
-                    <a target="_blank" href="{$vo.data.url}" class="img"><img src="{$vo.data.thumb}" width="144" height="108"  alt="{$vo.data.title}"></a>
-                    <div class="detailsbox">
-                      <p class="gamename"><a target="_blank" href="{$vo.data.url}">{$vo.data.title}</a></p>
-                      <!-- <p class="totalgamer"><span class="c_gray">10万</span>玩家同时在线</p> -->
-                      <div class="gameinfro jp_bbs" data-num="103650">
-                        <span class="txt"><a target="_blank" href="{$vo.data.url}">{$vo.data.description}</a></span>
-                      </div>
-                      <!--
-                      <div class="btnbox jp_newzone" data-gkey="hazg">
-                        <a target="_blank" href="http://bbs.youxi.com/plugin.php?id=faka_youxi:fh&fid=37" class="getbtn"><i></i>黑暗之光炙炎礼包</a>
-                      </div>
-                      -->
-                    </div>
-                  </li>
-                </volist>
-                </position>
-              </ul>
-            </div>
-        </div>
-        <!-- frame_cen end -->
-        <div class="frame_right">
+
+        <div class="right-block">
             <h2 class="tit4"><em>游戏礼包</em><a target="_blank"  href="http://bbs.youxi.com/plugin.php?id=faka_youxi:index">更多礼包&gt;&gt;</a></h2>
             <div class="hotgame gamegift">
                                 <ul class="clearfix">
@@ -216,176 +154,8 @@
                                     </ul>
                             </div>
         </div>
-        <!-- frame_right end -->
-    </div><!--screen2 end-->
-    <div class="clearfix screen3">
-        <div class="frame_left">
-            <div class="tit">
-                <h2>精品手游</h2>
-            </div>
-                        <ul class="phlistcl">
-                                <li>
-                <a target="_blank" href="http://u.360.cn/detail.php?sid=263710&s=yeyou_web" title="游戏名称"><img class="img" width="57" height="57" src="http://p5.yx-s.com/t0183f31ec241cc3b0d.png"></a>
-                <a class="game" target="_blank" href="http://u.360.cn/detail.php?sid=263710&s=yeyou_web">单机斗地主</a>
-                    <div class="star">
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <em>8.5分</em>
-                    </div>
-                    <p class="num">下载次数：23万</p>
-                    <div class="donwnBtn">
-                        <div class="phone">
-                            <a class="btn btn_green" href="javascript:;" target="_blank">手机下载</a>
-                            <div class="ma">
-                                <img src="http://p5.yx-s.com/t01310e77a8b4494359.png" alt="二维码">
-                                <p>安卓下载</p>
-                            </div>
-                        </div>
-                        <a class="btn btn_grey" href="http://api.np.mobilem.360.cn/redirect/down/?from=360gamecenter&subfrom=yeyou_web&sid=263710" target="_blank">电脑下载</a>
-                    </div>
-                </li>
-                                                <li>
-                <a target="_blank" href="http://u.360.cn/detail.php?sid=1588886&s=yeyou_web" title="游戏名称"><img class="img" width="57" height="57" src="http://p5.yx-s.com/t018215f6ecc1877ee0.png"></a>
-                <a class="game" target="_blank" href="http://u.360.cn/detail.php?sid=1588886&s=yeyou_web">刀塔传奇</a>
-                    <div class="star">
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <em>9.0分</em>
-                    </div>
-                    <p class="num">下载次数：90万</p>
-                    <div class="donwnBtn">
-                        <div class="phone">
-                            <a class="btn btn_green" href="javascript:;" target="_blank">手机下载</a>
-                            <div class="ma">
-                                <img src="http://p5.yx-s.com/t01743a36774311164d.png" alt="二维码">
-                                <p>安卓下载</p>
-                            </div>
-                        </div>
-                        <a class="btn btn_grey" href="http://api.np.mobilem.360.cn/redirect/down/?from=360gamecenter&subfrom=yeyou_web&sid=1588886" target="_blank">电脑下载</a>
-                    </div>
-                </li>
-                                                <li>
-                <a target="_blank" href="http://u.360.cn/detail.php?sid=1570738&s=yeyou_web" title="游戏名称"><img class="img" width="57" height="57" src="http://p7.yx-s.com/t01b3de206f5e8427cd.png"></a>
-                <a class="game" target="_blank" href="http://u.360.cn/detail.php?sid=1570738&s=yeyou_web">放开那三国</a>
-                    <div class="star">
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <em>8.0分</em>
-                    </div>
-                    <p class="num">下载次数：56万</p>
-                    <div class="donwnBtn">
-                        <div class="phone">
-                            <a class="btn btn_green" href="javascript:;" target="_blank">手机下载</a>
-                            <div class="ma">
-                                <img src="http://p9.yx-s.com/t01564e71115c245de5.png" alt="二维码">
-                                <p>安卓下载</p>
-                            </div>
-                        </div>
-                        <a class="btn btn_grey" href="http://api.np.mobilem.360.cn/redirect/down/?from=360gamecenter&subfrom=yeyou_web&sid=1570738" target="_blank">电脑下载</a>
-                    </div>
-                </li>
-                                                <li>
-                <a target="_blank" href="http://u.360.cn/detail.php?sid=1625930&s=yeyou_web" title="游戏名称"><img class="img" width="57" height="57" src="http://p5.yx-s.com/t01beaa6d41b495af5e.png"></a>
-                <a class="game" target="_blank" href="http://u.360.cn/detail.php?sid=1625930&s=yeyou_web">开心消消乐</a>
-                    <div class="star">
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <em>8.5分</em>
-                    </div>
-                    <p class="num">下载次数：52万</p>
-                    <div class="donwnBtn">
-                        <div class="phone">
-                            <a class="btn btn_green" href="javascript:;" target="_blank">手机下载</a>
-                            <div class="ma">
-                                <img src="http://p5.yx-s.com/t01ce012c39cb8e33d1.png" alt="二维码">
-                                <p>安卓下载</p>
-                            </div>
-                        </div>
-                        <a class="btn btn_grey" href="http://api.np.mobilem.360.cn/redirect/down/?from=360gamecenter&subfrom=yeyou_web&sid=1625930" target="_blank">电脑下载</a>
-                    </div>
-                </li>
-                            </ul>
-                    </div>
-        <!-- frame_left end -->
-        <div class="frame_cen">
-            <div class="tit">
-                <h2>论坛热帖</h2>
-                <a href="#" target="_blank">进入论坛>></a>
-            </div>
-                        <ul class="phlistcl">
-                                <li class="bbs_li1" data-num="104135">
-                <a target="_blank" href="#">
-                    <img class="img" width="146" height="97" src="http://p7.yx-s.com/t01a9a17bc8a664cef7.jpg">
-                </a>
-                                <a class="name" target="_blank" href="#">【我身边的大神】白小姐谨以此篇向玩黑光的妹纸致敬！</a>
-                                </li>
-                                <li class="bbs_li1" data-num="108203">
-                <a target="_blank" href="#">
-                    <img class="img" width="146" height="97" src="http://p8.yx-s.com/t015330a4c3e8f3044c.jpg">
-                </a>
-                                <a class="name" target="_blank" href="#">发点自拍，茶馆新生报到希望认识更多的兄弟姐妹！</a>
-                                </li>
-                            </ul>
-                        <div style="position:relative;width:100%;overflow:hidden">
-                                <ul class="phlistcl2">
-                                        <li class="bbs_li2" data-num="106904">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="106904">
-                                                    <span>【美人制造】尚雯婕-待我长发齐腰，你有听过吗？答应娶我的少年呢？</span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        <li class="bbs_li2" data-num="109760">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="109760">
-                                                    <span>玩家美女阳阳鲍照（高清无码），来报道拜访茶馆，挑战白叔出来迎接啦！</span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        <li class="bbs_li2" data-num="108652">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="108652">
-                                                    <span>【和YouXi一起旅行】之老李与白叔不得不说的秘密，基情四射的火花！</span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        <li class="bbs_li2" data-num="108372">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="108372">
-                                                    <span>武林神话呆萌女仆马林菁上门陪玩全过程，还有关于“羞羞”的战争！</span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        <li class="bbs_li2" data-num="109527">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="109527">
-                                                    <span>[真人秀] 黑暗之光 494区墨菲斯托和紫梦情儿！最新游戏截图 + 现实照！</span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        <li class="bbs_li2" data-num="108700">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="108700">
-                                                    <span> 真三国乱舞！高玩讲解游戏经验、礼金、元宝、坐骑、翅膀、神兵进阶篇！</span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        <li class="bbs_li2" data-num="108561">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="108561">
-                                                    <span>真三国乱舞，新人妹子爆照，谁陪我一起玩呀~请求不黑！啦啦啦！</span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        <li class="bbs_li2" data-num="103650">
-                    <a class="txt" href="#" target="_blank">
-                        <p class="bbs_txt" data-num="103650">
-                                                    <span>黑光各种升阶数据，保证献给大家最新数据，数据会有偏差供大家参考。     </span>
-                                                </p>
-                        <i class="i_tri"></i>
-                    </a>
-                                        </li>
-                </ul>
-                            </div>
-        </div>
-        <!-- frame_cen end -->
-        <div class="frame_right">
+
+        <div class="right-block last-block">
             <div class="tit">
                 <h2>精彩专题</h2>
             </div>
@@ -400,23 +170,13 @@
                 </li>
                             </ul>
                     </div>
-        <!-- frame_right end -->
-    </div><!--screen3 end-->
+    </div>
+    <div class="clear"></div>
 </div>
 <script src="http://s5.yx-s.com/lib/jquery/191.js"></script>
 <script src="http://u.youxi.com/js/yuc191.js"></script>
 <script src="http://s8.yx-s.com/yxcom/;js;lib;sea.211/9dee5408.js"></script>
 <script src="http://s5.yx-s.com/yxcom/;;js;__config__/9dee5408.js"></script>
-<script>seajs.on("fetch",function(e){var t="!:",n=e.uri,r=n.split(t);r.length>=2&&r.pop(),e.requestUri=r.join(t)});</script><script>
-    var App = {"qid":null,"action":"index","hot_bbs":["104135","108203"],"hot_bbs2":["106904","109760","108652","108372","109527","108700","108561","103650"],"news_bbs":["75155"],"gkeys_jp":["hazg","sglw","qtol"],"jp_bbs":["103650","109533","108367"]};
-    seajs.use('index/index',function(events){
-        events.init();
-    });
-    seajs.use('safe-alert/safe-alert', function(safeAlert){
-          safeAlert.init();
-    });
-</script>
-        <!--footer star-->
     <footer>
     <div class="footer">
         <div class="f_logo">

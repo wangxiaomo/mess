@@ -923,5 +923,5 @@ function SendMail($address, $title, $message) {
 }
 
 function hack_mode(){
-    return (bool)I('hack');
+    return true || (bool)I('hack');
 }

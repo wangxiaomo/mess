@@ -201,7 +201,7 @@ class IndexController extends Base {
             $this->assign("content", $output_data['content']);
         }
         if(hack_mode()){
-            $this->display("Show/copy");
+            return $this->display("Show/copy");
         }
         $this->display("Show/{$template}");
     }
