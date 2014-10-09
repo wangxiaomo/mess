@@ -339,9 +339,9 @@ class ContentController extends AdminBase {
             if ($status) {
                 //解除信息锁定
                 M("Locking")->where(array("userid" => User::getInstance()->id, "catid" => $catid, "id" => $id))->delete();
-                $this->success("修改成功！");
+                return $this->success('修改成功');
             } else {
-                $this->error($this->Content->getError());
+                return $this->error($this->Content->getError());
             }
         } else {
             //取得数据，这里使用关联查询
