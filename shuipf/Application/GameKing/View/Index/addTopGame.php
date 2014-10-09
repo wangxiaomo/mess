@@ -5,12 +5,19 @@
   <div class="clear"></div>
   <form role="form" class="form-horizontal" method="POST">
     <div class="form-group">
+      <label class="col-sm-1 control-label">图标预览</label>
+      <div class="col-sm-5">
+        <img id="img-prev" src="http://code.yueqingwang.com/upload/54360cd25046fsecondarytile.png" width="58" height="58" />
+      </div>
+    </div>
+    <div class="form-group">
       <label for="img" class="col-sm-1 control-label">游戏图标</label>
       <div class="col-sm-5">
         <span class="btn btn-success fileinput-button">
           <i class="glyphicon glyphicon-plus"></i>
           <span>上传图片</span>
-          <input type="file" id="fileupload" name="files[]" />
+          <input type="file" id="fileupload" name="files[]" accept="image/*" />
+          <input type="hidden" name="img" value="" />
         </span>
       </div>
     </div>
@@ -66,18 +73,36 @@ $(function(){
     acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
     maxFileSize: 5000000, // 5 MB
     done: function (e, data) {
-        console.log(data);
+        var files = data.result.files;
+        if(files.length){
+            var file = files[0];
+            if(file.error){
+                alert(file.error);
+                return;
+            }
+            $('input[name=img]').val(file.name);
+            $('#img-prev').attr('src', '/upload/' + file.name);
+        }
     },
   });
 
   $('form').submit(function(e){
-    var openTime = $.trim($('input[name=open_time]').val()),
-        gameName = $.trim($('input[name=game_name]').val()),
+    var gameName = $.trim($('input[name=game_name]').val()),
         meta = $.trim($('input[name=meta]').val()),
+        userCount = parseInt($('input[name=user_count]').val()),
+        rate = parseInt($('input[name=rate]').val()),
+        order = parseInt($('input[name=order]').val()),
+        img = $.trim($('input[name=img]').val()),
         url = $.trim($('input[name=url]').val());
 
-    if(openTime && gameName && meta && url){
-        return true;
+    if(gameName && meta && userCount && url && rate && order && img){
+        if(_.isNumber(userCount) && _.isNumber(rate) && _.isNumber(order)){
+            return true;
+        }else{
+            alert("入驻玩家数量、评分、排序必须为数字!");
+            e.preventDefault();
+            return false;
+        }
     }else{
         alert("请填写全部信息");
         e.preventDefault();

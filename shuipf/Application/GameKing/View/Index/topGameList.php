@@ -15,6 +15,16 @@
       </tr>
     </thead>
     <tbody>
+      <volist name="top_games" id="game">
+      <tr>
+        <td class="data">{$game.rank_order}</td>
+        <td class="data"><a href="{$game.url}" target="_blank" class="game-link"><img src="/upload/{$game.img}" width="58" height="58">{$game.name}</a></td>
+        <td class="data">{$game.meta}</td>
+        <td class="data">{$game.rate}</td>
+        <td class="data">{$game.user_count}万</td>
+        <td class="data"><a href="{:U('GameKing/Index/deleteTopGame', array('id'=>$game['id']))}" class="need_post del-link">删除</a></td>
+      </tr>
+      </volist>
     </tbody>
   </table>
 </div>

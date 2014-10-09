@@ -1,3 +1,9 @@
 .clear {
   clear: both;
 }
+td.data {
+  vertical-align: middle !important;
+}
+.game-link {
+  display: block;
+}

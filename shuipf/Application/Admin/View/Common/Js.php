@@ -19,4 +19,5 @@ var GV = {
 <script src="{$config_siteurl}statics/bower_components/jquery-file-upload/js/jquery.fileupload-image.js"></script>
 <script src="{$config_siteurl}statics/bower_components/jquery-file-upload/js/jquery.fileupload-video.js"></script>
 <script src="{$config_siteurl}statics/bower_components/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+<script src="{$config_siteurl}statics/bower_components/underscore/underscore-min.js"></script>
 <script src="{$config_siteurl}statics/js/global.js"></script>
