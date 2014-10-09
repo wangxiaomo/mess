@@ -54,4 +54,16 @@ class IndexController extends AdminBase {
         D('Server')->where("id=$id")->delete();
         return $this->ajaxReturn(array('r'=>1), 'JSON');
     }
+
+    public function addTopGame(){
+        if($_POST){
+
+        }else{
+            $this->display();
+        }
+    }
+
+    public function topGameList(){
+        $this->display();
+    }
 }
