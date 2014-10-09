@@ -22,7 +22,10 @@
         <td class="data">{$game.meta}</td>
         <td class="data">{$game.rate}</td>
         <td class="data">{$game.user_count}万</td>
-        <td class="data"><a href="{:U('GameKing/Index/deleteTopGame', array('id'=>$game['id']))}" class="need_post del-link">删除</a></td>
+        <td class="data">
+          <a href="{:U('GameKing/Index/updateTopGame', array('id'=>$game['id']))}">修改</a><br>
+          <a href="{:U('GameKing/Index/deleteTopGame', array('id'=>$game['id']))}" class="need_post del-link">删除</a>
+        </td>
       </tr>
       </volist>
     </tbody>

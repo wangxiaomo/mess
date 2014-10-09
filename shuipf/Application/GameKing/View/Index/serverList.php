@@ -16,11 +16,14 @@
     <tbody>
       <volist name="servers" id="server">
       <tr>
-        <td>{$server.id}</td>
-        <td><a href="{$server.url}" target="_blank">{$server.name}</a></td>
-        <td>{$server.meta}</td>
-        <td>{$server.open_time}</td>
-        <td><a class="need_post del-link" href="{:U('GameKing/Index/deleteServer', array('id'=>$server['id']))}">删除</a></td>
+        <td class="data">{$server.id}</td>
+        <td class="data"><a href="{$server.url}" target="_blank">{$server.name}</a></td>
+        <td class="data">{$server.meta}</td>
+        <td class="data">{$server.open_time}</td>
+        <td class="data">
+          <a href="{:U('GameKing/Index/updateServer', array('id'=>$server['id']))}">修改</a><br>
+          <a class="need_post del-link" href="{:U('GameKing/Index/deleteServer', array('id'=>$server['id']))}">删除</a>
+        </td>
       </tr>
       </volist>
     </tbody>

@@ -48,6 +48,31 @@ class IndexController extends AdminBase {
         }
     }
 
+    public function updateServer($id){
+        $server = D('Server')->where("id=$id")->find();
+        if($server){
+            if($_POST){
+                $name = trim(I('game_name'));
+                $meta = trim(I('meta'));
+                $url = trim(I('url'));
+                $open_time = trim(I('open_time'));
+
+                D('Server')->where("id=$id")->save(array(
+                    'name'  =>  $name,
+                    'meta'  =>  $meta,
+                    'url'   =>  $url,
+                    'open_time' =>  $open_time
+                ));
+                return $this->success('修改成功');
+            }else{
+                $this->assign('server', $server);
+                $this->display();
+            }
+        }else{
+            $this->error("没有此数据");
+        }
+    }
+
     public function deleteServer($id){
         $this->need_post();
 
@@ -81,6 +106,37 @@ class IndexController extends AdminBase {
             }
         }else{
             $this->display();
+        }
+    }
+
+    public function updateTopGame($id){
+        $game = D('TopGame')->where("id=$id")->find();
+        if($game){
+            if($_POST){
+                $name = trim(I('game_name'));
+                $meta = trim(I('meta'));
+                $url = trim(I('url'));
+                $img = trim(I('img'));
+                $user_count = (int)I('user_count');
+                $rate = (int)I('rate');
+                $order = (int)I('order');
+
+                D('TopGame')->where("id=$id")->save(array(
+                    'name'  =>  $name,
+                    'meta'  =>  $meta,
+                    'url'   =>  $url,
+                    'img'   =>  $img,
+                    'user_count'    =>  $user_count,
+                    'rate'  =>  $rate,
+                    'rank_order' =>  $order,
+                ));
+                return $this->success('修改成功');
+            }else{
+                $this->assign('game', $game);
+                $this->display();
+            }
+        }else{
+            $this->error("没有此数据");
         }
     }
 
