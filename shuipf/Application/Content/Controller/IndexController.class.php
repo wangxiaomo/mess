@@ -30,7 +30,7 @@ class IndexController extends Base {
         $this->assign("SEO", $SEO);
         //把分页分配到模板
         $this->assign(C("VAR_PAGE"), $page);
-        if(I('hack')){
+        if(hack_mode()){
             return $this->display("Index:copy");
         }
         $this->display("Index:" . $tp[0]);
@@ -199,6 +199,9 @@ class IndexController extends Base {
             }
         } else {
             $this->assign("content", $output_data['content']);
+        }
+        if(hack_mode()){
+            $this->display("Show/copy");
         }
         $this->display("Show/{$template}");
     }
