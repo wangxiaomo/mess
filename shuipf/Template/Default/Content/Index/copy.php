@@ -135,7 +135,7 @@
             </div>
             <div class="specl_column">
                                 <dl>
-                                  <get sql="SELECT * FROM shuipfcms_article  WHERE status=99 ORDER BY inputtime DESC" num="7">
+                                  <get sql="SELECT * FROM gameking_article  WHERE status=99 ORDER BY inputtime DESC" num="7">
                                   <volist name="data" id="vo">
                                     <if condition="$i eq 1">
                                         <dt class="news_bbs">

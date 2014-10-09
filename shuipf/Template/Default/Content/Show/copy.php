@@ -18,6 +18,10 @@
 <link rel="stylesheet" href="/statics/css/origin/layer.css"/>
 <link href="{$config_siteurl}statics/default/css/images.css" rel="stylesheet" type="text/css" />
 <style>
+.content p {
+    font-size: 15px;
+    margin: 8px 0;
+}
 .pageindex {
     margin-right: 15px;
 }
@@ -120,7 +124,7 @@
     <div class="left-bucket">
 
 <h1 class="title">{$title}</h1>
-<center>{$content}</center>
+<div class="content">{$content}</div>
 <div class="fanye" style="border: 0px solid #ccc;">
   <ul>{$pages}</ul>
 </div>
