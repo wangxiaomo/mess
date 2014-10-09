@@ -32,7 +32,7 @@
         <div class="menubg">
             <ul class="clearfix">
                 <li class="cur"><a href="/" target="_blank"><i></i>首页</a></li>
-                <li><a href="#"><i></i>找游戏</a></li>
+                <li><a href="/index.php?a=lists&catid=7"><i></i>精品页游</a></li>
                 <li><a href="#"><i></i>礼包活动</a></li>
                 <li><a href="#"><i></i>充值中心</a></li>
                 <li><a href="#"><i></i>客服中心</a></li>

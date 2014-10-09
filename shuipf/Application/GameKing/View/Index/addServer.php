@@ -1,4 +1,13 @@
-<Admintemplate file="Common/Head"/>
+<?php if (!defined('SHUIPF_VERSION')) exit(); ?>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>系统后台 - {$Config.sitename} - by ShuipFCMS</title>
+<Admintemplate file="Admin/Common/Cssjs"/>
+<link href="{$config_siteurl}statics/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
 <body class="J_scroll_fixed">
 <div class="wrap J_check_wrap">
   <Admintemplate file="Common/Nav"/>
@@ -37,6 +46,7 @@
     </div>
   </form>
 </div>
+<script src="{$config_siteurl}statics/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
 $(function(){
   $('form').submit(function(e){

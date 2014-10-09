@@ -16,7 +16,8 @@
 <link rel="stylesheet" href="/statics/css/origin/reset.css"/>
 <link rel="stylesheet" href="/statics/css/origin/9dee5408.css"/>
 <link rel="stylesheet" href="/statics/css/origin/layer.css"/>
-<link href="{$config_siteurl}statics/default/css/images.css" rel="stylesheet" type="text/css" />
+<link href="{$config_siteurl}statics/default/css/article_list.css" rel="stylesheet" type="text/css" />
+<link href="{$config_siteurl}statics/default/css/layout.css" rel="stylesheet" type="text/css" />
 <style>
 .content p {
     font-size: 15px;
@@ -25,11 +26,19 @@
 .pageindex {
     margin-right: 15px;
 }
+.fanye {
+    width: 100%;
+    padding: 0;
+}
 .clear { clear: both; }
 .left-bucket {
     float: left;
     width: 70%;
     margin-bottom: 50px;
+    padding-top: 30px;
+}
+.article_lanmu {
+    width: 100%;
 }
 .right-bucket {
     float: right;
@@ -128,13 +137,27 @@
 <div class="wrap">
     <div class="left-bucket">
 
-<h1 class="title">{$title}</h1>
-<p class="info"> 出处:本站原创&nbsp;&nbsp;&nbsp;发布时间:{$updatetime}</p>
-<div class="content">{$content}</div>
-<div class="fanye" style="border: 0px solid #ccc;">
-  <ul>{$pages}</ul>
-</div>
-<div class="ds-thread" data-thread-key="{$id}" data-title="{$title}" data-url="{$page_url}"></div>
+    <content action="lists" catid="$catid" order="id DESC" num="7" page="$page">
+    <div class="article_lanmu">
+      <h2><span class="h2_text">{:getCategory($catid,'catname')}</span></h2>
+      <volist name="data" id="vo">
+      <dl>
+        <dt><a href='{$vo.url}' title='{$vo.title}'><img src='<if condition="$vo['thumb']">{$vo.thumb}<else />{$config_siteurl}statics/default/images/defaultpic.gif</if>' alt='{$vo.title}'/></a></dt>
+        <dd class="arc_title"><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></dd>
+        <dd class="arc_desc">{$vo.description}...</dd>
+        <dd class="arc_info"><span>所属栏目：<a href='{:getCategory($catid,'url')}'>{:getCategory($catid,'catname')}</a></span> <span>更新日期：{$vo.updatetime|date="m-d H:i:s",###}</span> <span>阅读次数：{$vo.views}</span></dd>
+        <div style="clear:both"></div>
+      </dl>
+      </volist>
+    </div>
+    <div class="fanye">
+      <ul>
+        {$pages}
+      </ul>
+      <div style="clear:both"></div>
+    </div>
+    </content>
+
 <div class="clear"></div>
 
     </div>
@@ -236,20 +259,5 @@
     </div>
     </footer>
     <!--footer end-->
-<!-- 多说评论框 start -->
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"gameking"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-<!-- 多说公共JS代码 end -->
 </body>
 </html>

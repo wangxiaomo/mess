@@ -106,6 +106,9 @@ class IndexController extends Base {
         //seo分配到模板
         $seo = seo($catid, $setting['meta_title'], $setting['meta_description'], $setting['meta_keywords']);
         $this->assign("SEO", $seo);
+        if(hack_mode()){
+            return $this->display("List/copy");
+        }
         $this->display($template);
     }
 

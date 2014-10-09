@@ -8,7 +8,6 @@ var GV = {
 </script>
 <script src="{$config_siteurl}statics/js/wind.js"></script>
 <script src="{$config_siteurl}statics/js/jquery.js"></script>
-<script src="{$config_siteurl}statics/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{$config_siteurl}statics/bower_components/blueimp-canvas-to-blob/js/canvas-to-blob.js"></script>
 <script src="{$config_siteurl}statics/bower_components/blueimp-load-image/js/load-image.all.min.js"></script>
 <script src="{$config_siteurl}statics/bower_components/jquery.ui/ui/widget.js"></script>
