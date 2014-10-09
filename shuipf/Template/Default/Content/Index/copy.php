@@ -16,6 +16,11 @@
 <link rel="stylesheet" href="/statics/css/origin/reset.css"/>
 <link rel="stylesheet" href="/statics/css/origin/9dee5408.css"/>
 <link rel="stylesheet" href="/statics/css/origin/layer.css"/>
+<style>
+.phlist li .infro_txt {
+    margin-top: 10px;
+}
+</style>
 </head>
 <body >
 <noscript>您的浏览器不支持JS，将无法看到通过JS实现的效果</noscript>
@@ -75,44 +80,38 @@
 <!--V3 end-->
 <!-- common header end-->
 <div class="wrap">
-    <div class="clearfix screen1">
-        <div class="frame_left">
-                        <div class="toplist">
-                <h2 class="tit1"><em>人气网游 TOP 3</em></h2>
-                                <ul class="phlist">
-                                        <li>
-                                        <span class="num">1</span>
-                                        <div class="img"><a target="_blank" href="http://hg.youxi.com/"><img width="58" height="58" src="http://p7.yx-s.com/t0192e6e983ddb68cda.jpg"></a></div>
-                    <div class="txt">
-                        <p class="gametit"><a target="_blank" href="http://hg.youxi.com/">黑暗之光</a></p>
-                                                <span class="starbg"><i style="width:100%"></i></span>
-                        <p class="player_in">入驻玩家 56万</p>
-                    </div>
-                    <p class="c_gray infro_txt"><a class="c_gray" href="http://hg.youxi.com/" target="_blank">穿梭六大史诗时空，提炼文化精粹；威猛幻兽、神器，伴君戎马一生。</a></p>
-                    </li>
-                                                            <li>
-                                        <span class="num num2">2</span>
-                                        <div class="img"><a target="_blank" href="http://xy.youxi.com/"><img width="58" height="58" src="http://p9.yx-s.com/t014e4157dee80bb0e5.jpg"></a></div>
-                    <div class="txt">
-                        <p class="gametit"><a target="_blank" href="http://xy.youxi.com/">血饮传说</a></p>
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <p class="player_in">入驻玩家 42万</p>
-                    </div>
-                    <p class="c_gray infro_txt"><a class="c_gray" href="http://xy.youxi.com/" target="_blank">三大职业笑傲血饮之巅，千人团战尽显王者之风。热血重燃，新传奇由你续写!</a></p>
-                    </li>
-                                                            <li>
-                                        <span class="num num3">3</span>
-                                        <div class="img"><a target="_blank" href="http://qtol.youxi.com/"><img width="58" height="58" src="http://p5.yx-s.com/t01efca02da437664b5.jpg"></a></div>
-                    <div class="txt">
-                        <p class="gametit"><a target="_blank" href="http://qtol.youxi.com/">奇天</a></p>
-                                                <span class="starbg"><i style="width:80%"></i></span>
-                        <p class="player_in">入驻玩家 46万</p>
-                    </div>
-                    <p class="c_gray infro_txt"><a class="c_gray" href="http://qtol.youxi.com/" target="_blank">首推“硬派团战”全新概念，还原PK本质，使战斗更加简单、自由。</a></p>
-                    </li>
-                                    </ul>
-                            </div>
-                    </div>
+  <div class="clearfix screen1">
+      <div class="frame_left">
+        <div class="toplist">
+          <h2 class="tit1"><em>人气网游 TOP 3</em></h2>
+            <ul class="phlist">
+              <get sql="SELECT * FROM gameking_top_game ORDER BY rank_order" num="3">
+              <volist name="data" id="vo">
+              <li>
+                <span class="num num{$i}">{$i}</span>
+                <div class="img"><a target="_blank" href="{$vo.url}"><img width="58" height="58" src="/upload/{$vo.img}"></a></div>
+                <div class="txt">
+                  <p class="gametit"><a target="_blank" href="{$vo.url}">{$vo.name}</a></p>
+                  <if condition="$vo['rate'] eq 1">
+                    <span class="starbg"><i style="width:20%"></i></span>
+                  <elseif condition="$vo['rate'] eq 2" />
+                    <span class="starbg"><i style="width:40%"></i></span>
+                  <elseif condition="$vo['rate'] eq 3" />
+                    <span class="starbg"><i style="width:60%"></i></span>
+                  <elseif condition="$vo['rate'] eq 4" />
+                    <span class="starbg"><i style="width:80%"></i></span>
+                  <else />
+                    <span class="starbg"><i style="width:100%"></i></span>
+                  </if>
+                  <p class="player_in">入驻玩家 {$vo.user_count}万</p>
+                </div>
+                <p class="c_gray infro_txt"><a class="c_gray" href="{$vo.url}" target="_blank">{$vo.meta}</a></p>
+              </li>
+              </volist>
+              </get>
+            </ul>
+          </div>
+        </div>
         <!-- frame_left end -->
         <div class="frame_cen">
             <div class="bannerimg">
