@@ -154,13 +154,11 @@
             <h2 class="tit1"><em><b class="c_red">最新</b>开服列表</em></h2>
             <div class="newsevice">
                 <ul id="newzoneslist" class="clearfix">
-                                        <li><a target="_blank" href="http://www.youxi.com/gamelogin.php?gkey=hazg&skey=1201"><i></i><span class="c_time">09-12 19:40</span><span class="c_game">黑暗之光</span><span class="c_service">双线1201服</span></a></li> 
-                                        <li><a target="_blank" href="http://www.youxi.com/gamelogin.php?gkey=hazg&skey=1200"><i></i><span class="c_time">09-12 17:30</span><span class="c_game">黑暗之光</span><span class="c_service">双线1200服</span></a></li> 
-                                        <li><a target="_blank" href="http://www.youxi.com/gamelogin.php?gkey=sglw&skey=10"><i></i><span class="c_time">09-12 14:00</span><span class="c_game">真三国乱舞</span><span class="c_service">双线10服</span></a></li> 
-                                        <li><a target="_blank" href="http://www.youxi.com/gamelogin.php?gkey=hazg&skey=1199"><i></i><span class="c_time">09-12 15:30</span><span class="c_game">黑暗之光</span><span class="c_service">双线1199区</span></a></li> 
-                                        <li><a target="_blank" href="http://www.youxi.com/gamelogin.php?gkey=hazg&skey=1198"><i></i><span class="c_time">09-12 13:30</span><span class="c_game">黑暗之光</span><span class="c_service">双线1198服</span></a></li> 
-                                        <li><a target="_blank" href="http://www.youxi.com/gamelogin.php?gkey=hazg&skey=1197"><i></i><span class="c_time">09-12 11:15</span><span class="c_game">黑暗之光</span><span class="c_service">双线1197服</span></a></li> 
-                                        <li><a target="_blank" href="http://www.youxi.com/gamelogin.php?gkey=hazg&skey=1196"><i></i><span class="c_time">09-12 07:30</span><span class="c_game">黑暗之光</span><span class="c_service">双线1196区</span></a></li> 
+                  <get sql="SELECT * FROM gameking_server ORDER BY open_time DESC" num="7">
+                  <volist name="data" id="vo">
+                    <li><a target="_blank" href="{$vo.url}"><i></i><span class="c_time">{$vo.open_time}</span><span class="c_game">{$vo.name}</span><span class="c_service">{$vo.meta}</span></a></li> 
+                  </volist>
+                  </get>
                                     </ul>
             </div>
                                     <p><a target="_blank" href="http://p0.yx-s.com/ybox/YouXiSetup_Beta1.0.3.1010.rar" class="loadimg"><img src="http://p9.yx-s.com/d/inn/b28c6d9e/loadimg.jpg" width="270" height="108"></a></p>
