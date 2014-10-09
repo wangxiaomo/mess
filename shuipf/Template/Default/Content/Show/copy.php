@@ -60,6 +60,11 @@
     text-align: center;
     font-size: 25px;
     padding: 35px;
+    padding-bottom: 10px;
+}
+.info {
+    font-size: 13px;
+    margin-bottom: 25px;
 }
 </style>
 </head>
@@ -124,10 +129,12 @@
     <div class="left-bucket">
 
 <h1 class="title">{$title}</h1>
+<p class="info"> 出处:本站原创&nbsp;&nbsp;&nbsp;发布时间:{$updatetime}</p>
 <div class="content">{$content}</div>
 <div class="fanye" style="border: 0px solid #ccc;">
   <ul>{$pages}</ul>
 </div>
+<div class="ds-thread" data-thread-key="{$id}" data-title="{$title}" data-url="{$page_url}"></div>
 <div class="clear"></div>
 
     </div>
@@ -229,5 +236,20 @@
     </div>
     </footer>
     <!--footer end-->
+<!-- 多说评论框 start -->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gameking"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
 </body>
 </html>

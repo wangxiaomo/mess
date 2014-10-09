@@ -83,7 +83,7 @@
   <div class="clearfix screen1">
       <div class="frame_left">
         <div class="toplist">
-          <h2 class="tit1"><em>人气网游 TOP 3</em></h2>
+          <h2 class="tit1"><em>厂商推荐 TOP 3</em></h2>
             <ul class="phlist">
               <get sql="SELECT * FROM gameking_top_game ORDER BY rank_order" num="3">
               <volist name="data" id="vo">

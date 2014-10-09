@@ -173,7 +173,9 @@ class IndexController extends Base {
         //seo分配到模板
         $this->assign("SEO", $seo);
         //栏目ID
+        $this->assign("id", $id);
         $this->assign("catid", $catid);
+        $this->assign("page_url", U('Content/Index/shows', array('catid'=>$catid, 'id'=>$id)));
         //分页生成处理
         //分页方式 0不分页 1自动分页 2手动分页
         if ($data['paginationtype'] > 0) {
