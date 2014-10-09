@@ -404,6 +404,15 @@
 <script src="http://u.youxi.com/js/yuc191.js"></script>
 <script src="http://s8.yx-s.com/yxcom/;js;lib;sea.211/9dee5408.js"></script>
 <script src="http://s5.yx-s.com/yxcom/;;js;__config__/9dee5408.js"></script>
+<script>seajs.on("fetch",function(e){var t="!:",n=e.uri,r=n.split(t);r.length>=2&&r.pop(),e.requestUri=r.join(t)});</script><script>
+    var App = {"qid":null,"action":"index","hot_bbs":["109527","109429"],"hot_bbs2":["109561","109760","108652","110838","110503","108700","108561","109800"],"news_bbs":["110784"],"gkeys_jp":["hazg","sglw","qtol"],"jp_bbs":["97796","108109","103340"]};
+    seajs.use('index/index',function(events){
+        events.init();
+    });
+    seajs.use('safe-alert/safe-alert', function(safeAlert){
+          safeAlert.init();
+    });
+</script>
     <footer>
     <div class="footer">
         <div class="f_logo">
