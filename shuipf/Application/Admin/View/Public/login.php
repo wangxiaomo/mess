@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="edge" />
 <meta charset="utf-8" />
-<title>系统后台 - {$Config.sitename} - by ShuipFCMS</title>
+<title>系统后台 - {$Config.sitename}</title>
 <meta name="generator" content="ThinkPHP Shuipf" />
 <admintemplate file="Admin/Common/Js"/>
 <style type="text/css">
@@ -217,8 +217,7 @@ if (window.parent !== window.self) {
 <div class="footer">
   <div class="inner">
     <div class="copyright clearfix">
-      <p class="copyright_en">Copyright &copy; 2012 - {:date('Y')} , ShuipfCMS All Rights Reserved.</p>
-      <p class="copyright_ch"><a href="http://www.shuipfcms.com" target="_blank">http://www.shuipfcms.com</a></p>
+      <p class="copyright_en">Copyright &copy; 2012 - {:date('Y')} , All Rights Reserved.</p>
     </div>
   </div>
 </div>
