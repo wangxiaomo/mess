@@ -26,7 +26,7 @@ class IndexController extends ShuipFCMS {
 
     public function upload(){
         require_once(UTILS_PATH . 'UploadHandler.php');
-        $upload_handler = new UploadHandler(array(
+        $upload_handler = new \UploadHandler(array(
             'upload_dir'    =>  UPLOAD_PATH,
             'upload_url'    =>  '/upload/',
         ));
