@@ -16,59 +16,53 @@
     <div class="form-group">
       <label class="col-sm-1 control-label">图标预览</label>
       <div class="col-sm-5">
-        <img id="img-prev" src="/upload/54360cd25046fsecondarytile.png" width="58" height="58" />
+        <img id="img-prev" src="/upload/{$factory.img}" width="58" height="58" />
       </div>
     </div>
     <div class="form-group">
-      <label for="img" class="col-sm-1 control-label">游戏图标</label>
+      <label for="img" class="col-sm-1 control-label">厂商图标</label>
       <div class="col-sm-5">
         <span class="btn btn-success fileinput-button">
           <i class="glyphicon glyphicon-plus"></i>
           <span>上传图片</span>
           <input type="file" id="fileupload" name="files[]" accept="image/*" />
-          <input type="hidden" name="img" value="" />
+          <input type="hidden" name="img" value="{$factory.img}" />
         </span>
       </div>
     </div>
     <div class="form-group">
-      <label for="game_name" class="col-sm-1 control-label">游戏名称</label>
+      <label for="factory_name" class="col-sm-1 control-label">厂商名称</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" name="game_name">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="meta" class="col-sm-1 control-label">其他信息</label>
-      <div class="col-sm-5">
-        <input type="text" class="form-control" name="meta">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="user_count" class="col-sm-1 control-label">入驻玩家</label>
-      <div class="col-sm-5">
-        <input type="text" class="form-control" name="user_count">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="rate" class="col-sm-1 control-label">评分</label>
-      <div class="col-sm-5">
-        <input type="text" class="form-control" name="rate">
+        <input type="text" class="form-control" name="factory_name" value="{$factory.name}">
       </div>
     </div>
     <div class="form-group">
       <label for="url" class="col-sm-1 control-label">跳转链接</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" name="url">
+        <input type="text" class="form-control" name="url" value="{$factory.url}">
       </div>
     </div>
     <div class="form-group">
       <label for="order" class="col-sm-1 control-label">排序</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" name="order">
+        <input type="text" class="form-control" name="order" value="{$factory.rank_order}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="link1" class="col-sm-1 control-label">link1</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" name="link1" value="{$factory.link1}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="link2" class="col-sm-1 control-label">link2</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" name="link2" value="{$factory.link2}">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-1 col-sm-10">
-        <button type="submit" class="btn btn-default">新增</button>
+        <button type="submit" class="btn btn-default">修改</button>
       </div>
     </div>
   </form>
@@ -97,22 +91,12 @@ $(function(){
   });
 
   $('form').submit(function(e){
-    var gameName = $.trim($('input[name=game_name]').val()),
-        meta = $.trim($('input[name=meta]').val()),
-        userCount = parseInt($('input[name=user_count]').val()),
-        rate = parseInt($('input[name=rate]').val()),
-        order = parseInt($('input[name=order]').val()),
+    var factoryName = $.trim($('input[name=factory_name]').val()),
         img = $.trim($('input[name=img]').val()),
         url = $.trim($('input[name=url]').val());
 
-    if(gameName && meta && userCount && url && rate && order && img){
-        if(_.isNumber(userCount) && _.isNumber(rate) && _.isNumber(order)){
-            return true;
-        }else{
-            alert("入驻玩家数量、评分、排序必须为数字!");
-            e.preventDefault();
-            return false;
-        }
+    if(factoryName && img && url){
+        ;
     }else{
         alert("请填写全部信息");
         e.preventDefault();

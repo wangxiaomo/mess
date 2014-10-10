@@ -2510,3 +2510,43 @@ creen3 .frame_left .phlistcl li .donwnBtn .phone {
   font-weight:bold;
   text-decoration:none
 }
+.red {
+    color: red;
+}
+#newzoneslist {
+    display: block;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    list-style: none;
+}
+#newzoneslist li {
+    display: block;
+    width: 100%;
+    height: 55px;
+    padding: 12px 0;
+    border-bottom: 1px dotted #d9d9d9;
+    float: left;
+    overflow: hidden;
+}
+.PartA_RC_m {
+    float: left;
+    width: 71px;
+    height: 55px;
+    background: url(http://i0.sinaimg.cn/gm/home/2012/gb/s_28.gif) no-repeat;
+    position: relative;
+}
+.PartA_RC_f {
+    width: 154px;
+    height: 50px;
+    line-height: 20px;
+    padding: 5px 10px 0px;
+    float: left;
+    overflow: hidden;
+}
+.s_font5 {
+    color: #bababa;
+}
+.s_font8 {
+    color: #8b8b8b;
+}

@@ -152,4 +152,73 @@ class IndexController extends AdminBase {
         D('TopGame')->where("id=$id")->delete();
         return $this->ajaxReturn(array('r'=>1), 'JSON');
     }
+
+    public function factoryList(){
+        $factories = D('Factory')->order('rank_order')->select();
+        $this->assign('factories', $factories);
+        $this->display();
+    }
+
+    public function deleteFactory($id){
+        $this->need_post();
+
+        D('Factory')->where("id=$id")->delete();
+        return $this->ajaxReturn(array('r'=>1), 'JSON');
+    }
+
+    public function addFactory(){
+        if($_POST){
+            $name = trim(I('factory_name'));
+            $url = trim(I('url'));
+            $img = trim(I('img'));
+            $link1 = trim(I('link1'));
+            $link2 = trim(I('link2'));
+            $rank_order = trim(I('rank_order'));
+
+            if($name && $url && $img){
+                D('Factory')->data(array(
+                    'name'  =>  $name,
+                    'url'   =>  $url,
+                    'img'   =>  $img,
+                    'link1'  =>  $link1,
+                    'link2'  =>  $link2,
+                    'rank_order'    =>  $rank_order,
+                ))->add();
+                return $this->success('添加成功', U('GameKing/Index/factoryList'));
+            }else{
+                return $this->error('信息不全');
+            }
+        }else{
+            $this->display();
+        }
+    }
+
+    public function updateFactory($id){
+        $factory = D('Factory')->where("id=$id")->find();
+        if($factory){
+            if($_POST){
+                $name = trim(I('factory_name'));
+                $url = trim(I('url'));
+                $img = trim(I('img'));
+                $link1 = trim(I('link1'));
+                $link2 = trim(I('link2'));
+                $rank_order = trim(I('order'));
+
+                D('Factory')->where("id=$id")->save(array(
+                    'name'  =>  $name,
+                    'url'   =>  $url,
+                    'img'   =>  $img,
+                    'link1'  =>  $link1,
+                    'link2'  =>  $link2,
+                    'rank_order'    =>  $rank_order,
+                ));
+                return $this->success('修改成功');
+            }else{
+                $this->assign('factory', $factory);
+                $this->display();
+            }
+        }else{
+            $this->error("没有此数据");
+        }
+    }
 }

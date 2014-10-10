@@ -150,15 +150,23 @@
         </div>
         <!-- frame_cen end -->
         <div class="frame_right">
-            <h2 class="tit1"><em><b class="c_red">最新</b>开服列表</em></h2>
-            <div class="newsevice">
+            <h2 class="tit1"><em><b class="c_red">最新</b>厂商列表</em></h2>
+            <div class="">
                 <ul id="newzoneslist" class="clearfix">
-                  <get sql="SELECT * FROM gameking_server ORDER BY open_time DESC" num="7">
-                  <volist name="data" id="vo">
-                    <li><a target="_blank" href="{$vo.url}"><i></i><span class="c_time">{$vo.open_time}</span><span class="c_game">{$vo.name}</span><span class="c_service">{$vo.meta}</span></a></li> 
-                  </volist>
-                  </get>
-                                    </ul>
+                                  <get sql="SELECT * FROM gameking_factory ORDER BY rank_order" num="3">
+                                  <volist name="data" id="vo">
+<li>
+    <div class="PartA_RC_m">
+      <a href="{$vo.url}" target="_blank" title="{$vo.name}"><img src="/upload/{$vo.img}" width="68" height="52" alt="{$vo.name}" /></a>
+    </div>
+    <div class="PartA_RC_f s_font5">
+      <a href="{$vo.url}" target="_blank" title="{$vo.name}">{$vo.name}</a><br/>
+      <a href="{$vo.link1}" target="_blank" title="{$vo.name}">详情</a>┊<a class="red" href="{$vo.link2}" target="_blank" title="{$vo.name}">专区</a>
+    </div>
+</li> 
+                                  </volist>
+                                  </get>
+                </ul>
             </div>
                                     <p><a target="_blank" href="http://p0.yx-s.com/ybox/YouXiSetup_Beta1.0.3.1010.rar" class="loadimg"><img src="http://p9.yx-s.com/d/inn/b28c6d9e/loadimg.jpg" width="270" height="108"></a></p>
                                 </div>
@@ -404,13 +412,11 @@
 <script src="http://u.youxi.com/js/yuc191.js"></script>
 <script src="http://s8.yx-s.com/yxcom/;js;lib;sea.211/9dee5408.js"></script>
 <script src="http://s5.yx-s.com/yxcom/;;js;__config__/9dee5408.js"></script>
-<script>seajs.on("fetch",function(e){var t="!:",n=e.uri,r=n.split(t);r.length>=2&&r.pop(),e.requestUri=r.join(t)});</script><script>
-    var App = {"qid":null,"action":"index","hot_bbs":["109527","109429"],"hot_bbs2":["109561","109760","108652","110838","110503","108700","108561","109800"],"news_bbs":["110784"],"gkeys_jp":["hazg","sglw","qtol"],"jp_bbs":["97796","108109","103340"]};
+<script>seajs.on("fetch",function(e){var t="!:",n=e.uri,r=n.split(t);r.length>=2&&r.pop(),e.requestUri=r.join(t)});</script>
+<script>
+    var App = {"qid":null,"action":"index","hot_bbs":[],"hot_bbs2":[],"news_bbs":[],"gkeys_jp":[],"jp_bbs":[]};
     seajs.use('index/index',function(events){
         events.init();
-    });
-    seajs.use('safe-alert/safe-alert', function(safeAlert){
-          safeAlert.init();
     });
 </script>
     <footer>
