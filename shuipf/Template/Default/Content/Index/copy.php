@@ -32,7 +32,7 @@
         <div class="menubg">
             <ul class="clearfix">
                 <li class="cur"><a href="/" target="_blank"><i></i>首页</a></li>
-                <li><a href="/index.php?a=lists&catid=7"><i></i>精品页游</a></li>
+                <li><a href="/index.php?a=lists&catid=7"><i></i>{:getCategory(7, 'catname')}</a></li>
                 <li><a href="#"><i></i>礼包活动</a></li>
                 <li><a href="#"><i></i>充值中心</a></li>
                 <li><a href="#"><i></i>客服中心</a></li>
@@ -83,7 +83,7 @@
   <div class="clearfix screen1">
       <div class="frame_left">
         <div class="toplist">
-          <h2 class="tit1"><em>厂商推荐 TOP 3</em></h2>
+          <h2 class="tit1"><em>人气游戏 TOP 3</em></h2>
             <ul class="phlist">
               <get sql="SELECT * FROM gameking_top_game ORDER BY rank_order" num="3">
               <volist name="data" id="vo">
@@ -177,7 +177,7 @@
         </div>
         <!-- frame_left end -->
         <div class="frame_cen">
-            <h2 class="tit3"><em>精品页游</em></h2>
+            <h2 class="tit3"><em>游戏热点</em></h2>
             <div class="boutique">
               <ul>
                 <position action="position" posid="3">
@@ -218,7 +218,7 @@
     <div class="clearfix screen3">
         <div class="frame_left">
             <div class="tit">
-                <h2>精品手游</h2>
+                <h2>精品游戏</h2>
             </div>
                         <ul class="phlistcl">
                                 <li>
