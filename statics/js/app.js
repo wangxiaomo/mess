@@ -33,17 +33,17 @@ $(function(){
   });
   $('.go-to-feature').on('click', function(e){
     e.preventDefault();
-    $('html,body').animate({scrollTop: '1000px'}, 800);
+    $('html,body').animate({scrollTop: '1100px'}, 800);
     return false;
   });
   $('.go-to-plan').on('click', function(e){
     e.preventDefault();
-    $('html,body').animate({scrollTop: '1500px'}, 800);
+    $('html,body').animate({scrollTop: '1700px'}, 800);
     return false;
   });
   $('.go-to-contact').on('click', function(e){
     e.preventDefault();
-    $('html,body').animate({scrollTop: '2000px'}, 800);
+    $('html,body').animate({scrollTop: '2200px'}, 800);
     return false;
   });
 
