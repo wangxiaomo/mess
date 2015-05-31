@@ -43,7 +43,7 @@ $(function(){
   });
   $('.go-to-contact').on('click', function(e){
     e.preventDefault();
-    $('html,body').animate({scrollTop: '2200px'}, 800);
+    $('html,body').animate({scrollTop: '3100px'}, 800);
     return false;
   });
 
