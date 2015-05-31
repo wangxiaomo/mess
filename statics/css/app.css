@@ -1,0 +1,56 @@
+* { margin: 0; padding: 0; font: 14px "Microsoft YaHei","微软雅黑","SimHei","黑体"; }
+.page { margin: 0 auto; width: 100%; }
+.page-content { width: 960px; margin: 0 auto; height: 100%; position: relative; }
+ul.menu { list-style: none; }
+ul.menu li { float: left; }
+ul.menu li a { display: inline-block; color: #fff; text-decoration: none; padding: 0px 8px; border-left: 1px solid #fff; }
+ul.menu li a:hover { text-decoration: underline; }
+
+.top-nav { background: url(../images/top.png) repeat; color: #fff; height: 35px; font-size: 13px;}
+.top-nav-left { float: left; line-height: 35px; color: #fff; }
+.top-nav-left span { color: #fff; }
+.top-nav-right { float: right; line-height: 25px; margin-top: 10px; }
+
+.page-menu { height: 110px; }
+.logo { width: 380px; height: 110px; background: url(../images/logo.png) left center no-repeat; float: left; }
+.search { float: right; margin-top: 20px; }
+.search #token { float: left; margin: 2px 0 0 6px; border: 0; width: 159px; font-size: 13px; height: 27px; padding-left: 4px; }
+.page-menu-detail { position: absolute; bottom: 15px; right: 0px; }
+.page-menu-detail .menu li a { border-left: none; font-size: 18px; }
+
+.topic { margin-bottom: 50px; }
+.topic h1 { padding: 10px 0px 10px 10px; background: url(../images/banner.png) no-repeat; color: #fff; }
+#school-logo { border-radius: 50%; }
+.school-detail { padding-left: 200px; margin-top: -150px; }
+.school-detail p { margin-bottom: 15px; text-indent: 2em; color: #444; line-height: 22px; }
+.feature-wrapper { min-height: 350px; margin-top: 30px; }
+.feature { width: 22%; margin: 0px 1%; float: left; text-align: center; border: 1px solid #eee; box-shadow: 5px 5px 10px #999; border-radius: 5px; padding: 20px 10px; }
+.feature span { display: inline-block; }
+.feature-icon { width: 100px; height: 100px; margin: 0 auto; margin-bottom: 15px; }
+.feature-icon img { width: 100%; height: 100%; }
+.feature-icon i { width: 100%; height: 100%; line-height: 100px; font-size: 100px; text-align: center; color: #444; }
+.feature-name { width: 100%; text-align: center; font-weight: bold; font-size: 20px; padding: 10px 0px; color: #1d9e74; margin-top: -20px; }
+.feature-meta { padding: 8px; text-align: left; text-indent: 2em; height: 170px; overflow: hidden; color: #444; }
+.major-label { float: right; margin-left: 5px; }
+.major-name { width: 50%; }
+.major-length { width: 15%; text-align: center; }
+.contact-wrapper { height: 400px; }
+.school-info { width: 40%; float: left; }
+.school-info span { color: #666; display: block; line-height: 25px; }
+.school-info span.school-name { color: #1d9e74; font-weight: bold; font-size: 20px; padding: 10px 0px; }
+.teachers { width: 100%; margin-top: 40px; }
+.teacher { width: 33%; float: left; }
+.teacher img { margin-bottom: 10px; }
+#baidu-map { height: 340px; width: 60%; float: right; }
+
+.page-footer { height: 80px; }
+.page-footer div { color: #fff; font-size: 13px; line-height: 30px; }
+.page-footer .copyright { padding-top: 10px; }
+
+.page-menu, .page-footer { background: url(../images/page.png) repeat; z-index: 1000; }
+.clear { clear: both; }
+
+.table-3 { float: left; width: 40%; }
+.table-3-2 { float: left; width: 40%; margin-left: 10%; }
+
+caption { color: #1d9e74; font-size: 20px; font-weight: bold; }
