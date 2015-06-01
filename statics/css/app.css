@@ -21,10 +21,11 @@ ul.menu li a:hover { text-decoration: underline; }
 .topic { margin-bottom: 50px; }
 .topic h1 { padding: 10px 0px 10px 10px; background: url(../images/banner.png) no-repeat; color: #fff; }
 #school-logo { border-radius: 50%; }
-.school-detail { padding-left: 200px; margin-top: -150px; }
+.school-detail { padding-left: 440px; margin-top: -300px; }
 .school-detail p { margin-bottom: 15px; text-indent: 2em; color: #444; line-height: 22px; }
-.school-detail p.reset-p-margin { margin-left: -200px; }
+.school-detail p.reset-p-margin { margin-left: -430px; }
 .feature-wrapper { min-height: 350px; margin-top: 30px; }
+.culture-card { width: 100%; border: 1px solid #eee; box-shadow: 5px 5px 10px #999; border-radius: 5px; padding: 20px 10px; }
 .feature { width: 22%; margin: 0px 1%; float: left; text-align: center; border: 1px solid #eee; box-shadow: 5px 5px 10px #999; border-radius: 5px; padding: 20px 10px; }
 .feature span { display: inline-block; }
 .feature-icon { width: 120px; height: 120px; margin: 0 auto; margin-bottom: 25px; }
@@ -60,3 +61,6 @@ ul.courses { list-style: none; }
 .course-name { color: #1d9e74; }
 .certificate { color: #ff6666; }
 .strength { color: #0099cc; }
+
+.contact-us { margin-top: 30px; }
+#awards { width: 100%; margin-bottom: 20px; }

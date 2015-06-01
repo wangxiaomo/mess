@@ -39,10 +39,10 @@
         </div>
         <div class="page-menu-detail">
           <ul class="menu">
-            <li><a href="#school" class="go-to-school">学校简介</a></li>
-            <li><a href="#feature" class="go-to-feature">教学特色</a></li>
-            <li><a href="#plan" class="go-to-plan">招生计划</a></li>
-            <li><a href="#contact" class="go-to-contact">联系我们</a></li>
+            <li><a href="#school" class="go-to-school">综合篇</a></li>
+            <li><a href="#feature" class="go-to-feature">教学篇</a></li>
+            <li><a href="#culture" class="go-to-culture">文化篇</a></li>
+            <li><a href="#plan" class="go-to-plan">招生篇</a></li>
           </ul>
         </div>
       </div>
@@ -77,46 +77,89 @@
     <div class="page page-topic">
       <div class="page-content">
         <div class="topic" id="school">
-          <h1>学校介绍</h1>
+          <h1>综合篇</h1>
           <hr />
           <div>
-            <img id="school-logo" src="statics/images/150.png" />
+            <img id="awards" src="statics/images/awards.png" />
+
+            <div id="littleSliderContainer" style="position: relative; margin: 0 auto; top: 40px; left: -270px; width: 400px; height: 300px; overflow: hidden;">
+              <!-- Loading Screen -->
+              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position: absolute; display: block; background: url(statics/images/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+              </div>
+              <!-- Slides Container -->
+              <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 400px; height: 300px; overflow: hidden;">
+                <div><img u="image" src="statics/images/data/x1.jpg" /></div>
+                <div><img u="image" src2="statics/images/data/x2.jpg" /></div>
+                <div><img u="image" src2="statics/images/data/x3.jpg" /></div>
+                <div><img u="image" src2="statics/images/data/x4.jpg" /></div>
+                <div><img u="image" src2="statics/images/data/x5.jpg" /></div>
+              </div>
+              <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
+                <div u="prototype"></div>
+              </div>
+              <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;"></span>
+              <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;"></span>
+            </div>
+
             <div class="school-detail">
-              <p>山西省经贸学校是2003年1月由省人民政府批准改制的一所国有公办全日制普通中专学校，现为国家级重点中专学校、山西省中等职业教育管理四星级学校。</p>
-              <p>学校拥有国家职业教育烹饪实训基地、国家级职业教育农产品保鲜与加工实训基地、山西省职业教育酒店服务与管理实训基地、山西省职业教育计算机实训基地、中餐烹饪实习操作间、酒店服务实训室等各类校内实习实训场所共40多个；现开设有中餐烹调、中式面点制作、西式面点制作、电子商务、会计、市场营销、酒店服务与管理、计算机应用、数字媒体技术应用等9个适应市场需求的的专业，其中烹饪、市场营销、会计、农产品保鲜与加工四个专业为省级示范专业。现学校已发展成为一所具有餐饮、电子商务、会计等商务特色的优质特色中专学校。</p>
-              <p class="reset-p-margin">学校坚持把教育工作放在首位，在学生中全面推行准军事化管理育人模式，使学生做到了“自信自立、永不言弃、规范行为、严格自律”，学生管理规范有序，在同类学校中具有一定示范作用，学校多次被山西省人民政府、山西省省直工委授予“山西省教育工作先进单位”，“省直文明和谐单位标兵”称号，2007年，学校被国家商务部、人事部授予“全国商务系统先进集体”称号；2008年，学校被中国烹饪协会授予“全国餐饮业教育成果奖”，2011、2012年学校党委连续两年荣获省直工委“先进基层党组织”称号。</p>
-              <p class="reset-p-margin">山西省经贸学校秉承“以学生为中心，以服务为宗旨，以就业为导向，以能力为本位”的办学理念，坚持“创品牌专业能力为本，办特色学校德育领先”的办学思路，学校教学管理水平不断提高，学校的社会声誉不断提升，为社会输送了万余名各类实用型、技术型人才，为职业教育的发展做出了积极的贡献。</p>
+              <p>山西省经贸学校是2003年1月由省人民政府批准改制的一所国有公办全日制普通中专学校，现为国家级重点中专学校、山西省中等职业教育管理四星级学校。其前身是创办于1952年的山西省商业干部学校。学校设有国家职业技能鉴定所、天津商业大学山西函授站。</p>
+              <p>学校分南北两个校区，占地面积34847.4平米，建筑面积32876.2平米。学校拥有国家职业教育烹饪实训基地、国家级职业教育农产品保鲜与加工实训基地、山西省职业教育酒店服务与管理实训基地、山西省职业教育计算机实训基地、山西省外经贸人才培养基地、计算机室、电子商务、会计电算化、中餐烹饪实习操作间、酒店服务实训室等各类校内实习实训场所共40多个；有太原市六味斋实业有限公司、山西海外海大酒店、山西会馆、山西万峻计算机软件公司、美特好超市、巴黎春天百货有限公司、北京好利来山西分公司等校外实训基地30多个。学校现开设有中餐烹调、中式面点制作、西式面点制作、电子商务、会计、市场营销、农产品保鲜与加工、酒店服务与管理、计算机应用、数字媒体技术应用等10个适应市场需求的专业。其中烹饪、市场营销、会计、农产品保鲜与加工四个专业为省级示范专业。 现学校已发展成为一所具有餐饮、电子商务、会计等商务特色的优质特色中专学校。</p>
+              <p class="reset-p-margin">学校坚持把德育工作放在首位，在学生中全面推行准军事化管理育人模式，使学生做到了“自信自立、永不言弃、规范行为、严格自律”，学生管理规范有序，在同类学校中具有一定示范作用。从2007年起，学校连续七年成功组织了省职业院校烹饪技能大赛，并连续七年组队代表山西省参加了全国中职烹饪技能大赛，均取得了优异成绩。2009年全国中职烹饪技能大赛中，学校一举获得两个全国一等奖，一个全国三等奖。2010年6月，学校荣获2010年全国职业院校学生技能作品展洽会一等奖。2011年全国中职烹饪技能大赛中，学校又获得一个一等奖，一个三等奖，在全省所有参赛学校中名列前茅，在全省乃至全国展示了学校的办学水平。</p>
+              <p class="reset-p-margin">上级领导多次来学校视察并指导工作，副省长张平亲临学校，观看我校学生的面艺表演并题词：“山西面艺名扬天下”，学校的社会声誉不断提高。学校受中央电视台邀请，六次登上了央视舞台，2010年春节期间，参加了CCTV-7套“面面聚道”面条厨艺竞技大赛，参加了CCTV-7套2010年农民工春节联欢晚会。2010年、2011年学校面艺表演队还分别在CCTV-1《我们有一套》和《生活早参考》栏目中为全国观众上演了精彩绝伦的面艺表演。2012年3月，CCTV-7套为我校录制了长达25分钟的专题片《舞动的面》，在全国范围内展示了学校的风采。</p>
+              <p class="reset-p-margin">学校多次被山西省人民政府、山西省省直工委授予“山西省教育工作先进单位”、“省直文明和谐单位标兵”称号。2007年，学校被国家商务部、人事部授予“全国商务系统先进集体”称号；2008年，学校被中国烹饪协会授予 “全国餐饮业教育成果奖”， 2011、2012年学校党委连续两年荣获省直工委“先进基层党组织”称号。</p>
+              <p class="reset-p-margin">山西省经贸学校秉承“以学生为中心，以服务为宗旨，以就业为导向，以能力为本位”的办学理念，坚持“创品牌专业能力为本，办特色学校德育领先”的办学思路，学校教学管理水平不断提高，学校的社会声誉不断攀升，为社会输送了万余名各类实用型、技能型人才，为职业教育的发展做出了积极的贡献。</p>
             </div>
           </div>
         </div>
         <div class="topic" id="feature">
-          <h1>教学特色</h1>
+          <h1>教学篇</h1>
           <hr />
           <div class="feature-wrapper">
             <div class="feature">
               <div class="feature-icon"><img src="statics/images/data/feature/jiaoxue.png" /></div>
-              <span class="feature-name">专业创新</span>
-              <span class="feature-meta">秉承“以学生为衷心，以服务为宗旨，以就业为导向，以能力为本位”的办学理念，坚持“创品牌专业能力为本，办特色学校德育领先”的办学思路</span>
+              <span class="feature-name">技能展示</span>
+              <span class="feature-meta">一技在手，天下我有</span>
             </div>
             <div class="feature">
               <div class="feature-icon"><img src="statics/images/data/feature/guanli.png" /></i></div>
-              <span class="feature-name">管理严格</span>
-              <span class="feature-meta">坚持把德育工作放在首位，在学生中全面推行准军事化管理育人模式，使学生做到了“自信自立、永不言弃、规范行为、严格自律”，学生管理有序。</span>
+              <span class="feature-name">实训基地</span>
+              <span class="feature-meta">拥有国家职业教育烹饪实训基地等各类校内实习实训场所共40多个</span>
             </div>
             <div class="feature">
               <div class="feature-icon"><img src="statics/images/data/feature/shizi.png" /></div>
-              <span class="feature-name">师资雄厚</span>
-              <span class="feature-meta">拥有国家职业教育烹饪实训基地等各类校内实习实训场所共40多个；开设有数字媒体技术应用等9个适应市场需求的专业，其中烹饪、市场营销、会计、农产品保鲜与加工四个专业为省级示范专业。</span>
+              <span class="feature-name">师资建设</span>
+              <span class="feature-meta">开设有数字媒体技术应用等9个适应市场需求的专业，其中烹饪、市场营销、会计、农产品保鲜与加工四个专业为省级示范专业。</span>
             </div>
             <div class="feature">
               <div class="feature-icon"><img src="statics/images/data/feature/jiuye.png" /></div>
-              <span class="feature-name">就业广泛</span>
+              <span class="feature-name">硕果累累</span>
               <span class="feature-meta">学校和多家企业深度合作，保证每位学生学有所成后百分百就业，为社会输送了万余名各类实用型、技术型人才，为职业教育的发展做出了积极的贡献。</span>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="topic" id="culture">
+          <h1>文化篇</h1>
+          <hr />
+          <div>
+            <div class="culture-card">
+              <span class="card-title">准军事化管理</span>
+            </div>
+            <div class="culture-card">
+              <span class="card-title">文化活动</span>
+            </div>
+            <div class="culture-card">
+              <span class="card-title">爱心校园</span>
+            </div>
+            <div class="culture-card">
+              <span class="card-title">毕业生风采</span>
             </div>
           </div>
         </div>
         <div class="topic" id="plan">
-          <h1>招生计划</h1>
+          <h1>招生篇</h1>
           <hr />
           <div>
             <table class="table table-bordered">
@@ -187,11 +230,7 @@
             </ul>
             <div class="clear"></div>
           </div>
-        </div>
-        <div class="topic" id="contact">
-          <h1>联系我们</h1>
-          <hr />
-          <div class="contact-wrapper">
+          <div class="contact-wrapper contact-us">
             <div class="school-info">
               <span class="school-name">山西省经贸学校</span>
               <span class="addr">地址: 山西省太原市小店区坞城路31号山西省经贸学校</span>

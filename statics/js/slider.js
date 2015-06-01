@@ -55,7 +55,8 @@ $(function(){
     }
   };
 
-  var jssorSlider = new $JssorSlider$("sliderContainer", options);
+  var jssorSlider = new $JssorSlider$("sliderContainer", options),
+      littleJssorSlider = new $JssorSlider$("littleSliderContainer", options);
 
   //responsive code begin
   //you can remove responsive code if you don't want the slider scales while window resizes
