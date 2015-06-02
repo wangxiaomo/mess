@@ -10,12 +10,14 @@ ul.menu li a:hover { text-decoration: underline; }
 .top-nav-left { float: left; line-height: 35px; color: #fff; }
 .top-nav-left span { color: #fff; }
 .top-nav-right { float: right; line-height: 25px; margin-top: 10px; }
+.app-menu li { display: block; height: 35px; }
+.app-menu li a { line-height: 35px; }
 
 .page-menu { height: 110px; }
 .logo { width: 380px; height: 110px; background: url(../images/logo.png) left center no-repeat; float: left; }
 .search { float: right; margin-top: 20px; }
 .search #token { float: left; margin: 2px 0 0 6px; border: 0; width: 159px; font-size: 13px; height: 27px; padding-left: 4px; }
-.page-menu-detail { position: absolute; bottom: 15px; right: 0px; }
+.page-menu-detail { position: absolute; bottom: 8px; right: 0px; }
 .page-menu-detail .menu li a { border-left: none; font-size: 18px; }
 
 .topic { margin-bottom: 50px; }
@@ -26,6 +28,7 @@ ul.menu li a:hover { text-decoration: underline; }
 .school-detail p.reset-p-margin { margin-left: -430px; }
 .feature-wrapper { min-height: 350px; margin-top: 30px; }
 .culture-card { width: 100%; border: 1px solid #eee; box-shadow: 5px 5px 10px #999; border-radius: 5px; padding: 20px 10px; margin-bottom: 15px; }
+.culture-card img { width: 100%; }
 .culture-card .card-title { color: #1d9e74; font-weight: bold; font-size: 20px; padding: 15px 0px; }
 .feature { width: 22%; margin: 0px 1%; float: left; text-align: center; border: 1px solid #eee; box-shadow: 5px 5px 10px #999; border-radius: 5px; padding: 20px 10px; }
 .feature span { display: inline-block; }
@@ -44,7 +47,7 @@ ul.menu li a:hover { text-decoration: underline; }
 .teachers { width: 100%; margin-top: 40px; }
 .teacher { width: 33%; float: left; }
 .teacher img { margin-bottom: 10px; }
-#baidu-map { height: 340px; width: 60%; float: right; }
+#baidu-map { height: 392px; width: 60%; float: right; }
 
 .page-footer { height: 80px; }
 .page-footer div { color: #fff; font-size: 13px; line-height: 30px; }
@@ -64,4 +67,5 @@ ul.courses { list-style: none; }
 .strength { color: #0099cc; }
 
 .contact-us { margin-top: 30px; }
+.contact-us-img { width: 95%; margin-top: 15px; }
 #awards { width: 100%; margin-bottom: 20px; }

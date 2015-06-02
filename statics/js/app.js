@@ -36,9 +36,14 @@ $(function(){
     $('html,body').animate({scrollTop: '1800px'}, 800);
     return false;
   });
+  $('.go-to-culture').on('click', function(e){
+    e.preventDefault();
+    $('html,body').animate({scrollTop: '2300px'}, 800);
+    return false;
+  });
   $('.go-to-plan').on('click', function(e){
     e.preventDefault();
-    $('html,body').animate({scrollTop: '1700px'}, 800);
+    $('html,body').animate({scrollTop: '7600px'}, 800);
     return false;
   });
 
