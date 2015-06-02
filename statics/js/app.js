@@ -33,17 +33,12 @@ $(function(){
   });
   $('.go-to-feature').on('click', function(e){
     e.preventDefault();
-    $('html,body').animate({scrollTop: '1100px'}, 800);
+    $('html,body').animate({scrollTop: '1800px'}, 800);
     return false;
   });
   $('.go-to-plan').on('click', function(e){
     e.preventDefault();
     $('html,body').animate({scrollTop: '1700px'}, 800);
-    return false;
-  });
-  $('.go-to-contact').on('click', function(e){
-    e.preventDefault();
-    $('html,body').animate({scrollTop: '3100px'}, 800);
     return false;
   });
 
