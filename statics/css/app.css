@@ -26,17 +26,9 @@ ul.menu li a:hover { text-decoration: underline; }
 .school-detail { padding-left: 440px; margin-top: -300px; }
 .school-detail p { margin-bottom: 15px; text-indent: 2em; color: #444; line-height: 22px; }
 .school-detail p.reset-p-margin { margin-left: -430px; }
-.feature-wrapper { min-height: 350px; margin-top: 30px; }
 .culture-card { width: 100%; border: 1px solid #eee; box-shadow: 5px 5px 10px #999; border-radius: 5px; padding: 20px 10px; margin-bottom: 15px; }
 .culture-card img { width: 100%; }
 .culture-card .card-title { color: #1d9e74; font-weight: bold; font-size: 20px; padding: 15px 0px; }
-.feature { width: 22%; *width: 20%; margin: 0px 1%; float: left; text-align: center; border: 1px solid #eee; box-shadow: 5px 5px 10px #999; border-radius: 5px; padding: 20px 10px; }
-.feature span { display: inline-block; }
-.feature-icon { width: 120px; height: 120px; margin: 0 auto; margin-bottom: 25px; }
-.feature-icon img { width: 100%; height: 100%; }
-.feature-icon i { width: 100%; height: 100%; line-height: 100px; font-size: 100px; text-align: center; color: #444; }
-.feature-name { width: 100%; text-align: center; font-weight: bold; font-size: 20px; padding: 10px 0px; color: #1d9e74; margin-top: -20px; }
-.feature-meta { padding: 8px; text-align: left; text-indent: 2em; height: 135px; overflow: hidden; color: #444; }
 .major-label { float: right; margin-left: 5px; }
 .major-name { width: 35%; }
 .major-length { width: 15%; text-align: center; }
